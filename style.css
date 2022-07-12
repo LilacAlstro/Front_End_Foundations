@@ -62,7 +62,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 190%;
   color: #fff;
 }
 
@@ -76,8 +76,10 @@ header nav {
 
 header nav ul {
   display: flex;
-  padding-left: 0;
+  padding:20px 0;
   list-style: none;
+  max-width: 400px;
+  justify-content: space-evenly;
 }
 
 header nav ul li a {
@@ -94,7 +96,7 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 20px;
 }
 
 form label {
@@ -103,6 +105,7 @@ form label {
 
 form select,
 form input {
+  margin-top: 5px;
   margin-bottom: 20px;
   width: 180px;
 }
@@ -120,6 +123,20 @@ form button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: auto;
+}
+form label{
+  flex: 40;
+}
+form .select {
+  display: inline-block;
+}
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 /*----About----*/
 #about img {
@@ -155,65 +172,90 @@ footer p {
   }
   .logo {
     font-size: 30px;
-    justify-content: center;
   }
 
   .vacation-form {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 10px;
   }
+  #stay label {
+    width: 100%;
+  }
+  #stay .select {
+    width: 100%;
+  }
+
   .flex-input {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-right: 30px;
   }
-  .flex-button{
-    display: flex;
-    justify-content: end;
+  .flex-button{       
+    padding: 10px 20px;
+    align-items: center;
   }
 
   .about-image-and-text-flex{
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   align-items: center;
+  }
+  .about-image-flex{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    flex: 0.5;
   }
-  .about-image-pad{
-    margin: 15px;
+  .about-image-flex2{
+    display: flex;
+    flex-direction: row;
+    flex: 0.5;
   }
+  .about-text-flex{
+    display: flex;
+    text-align: left;
+    flex: 1;
+  }
+  
 
-  #about img{
-    width: 250px;
-  }
+ 
 
   .ideas-image-and-text-flex{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 0 4px;
   }
   .single-image-flex{
     margin: 10px;
   }
 
-  #host {
-    display: flex;
-    align-items: center;
+  .ideas-column{
+    flex: 50%;
+    max-width: 50%;
+  }
+  .ideas-column img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
   }
 
-  #host img{
-    display: flex; 
+  .host-text-and-image-flex{
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .host-image-flex{
+    flex: 1; 
+    flex-direction: column;
     width: 100%;    
   }
 
   .host-text-flex{
-    justify-content: space-evenly;
-    flex-grow: 1;
-    margin: 0 5%;
-  }
-
-  .host-text-and-image-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+    flex: 1; 
+    flex-direction: column;
+    text-align: left; 
+  }  
 
 }
